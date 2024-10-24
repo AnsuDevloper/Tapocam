@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapo Camera Stream</title>
+</head>
+<body>
+    <h1>Tapo Camera Stream</h1>
+    <video id="cameraStream" controls autoplay></video>
+    <script>
+        const rtspUrl = 'rtsp://AnsumanBehera:Anshu2024@192.168.29.157:554/stream1';
+        
+        // You need a media server to convert RTSP to a web-compatible format
+        const mediaServerUrl = `https://your_media_server_url?url=${encodeURIComponent(rtspUrl)}`;
+        document.getElementById('cameraStream').src = mediaServerUrl;
+    </script>
+</body>
+</html>
