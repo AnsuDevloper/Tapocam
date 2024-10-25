@@ -1,12 +1,27 @@
 {
-  "name": "tapo-camera-stream",
+  "name": "Tapocamera",
   "version": "1.0.0",
-  "main": "server.js",
+  "description": "A project to record RTSP stream from a Tapo camera and upload it to Google Drive.",
+  "main": "recordRTSP.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node recordRTSP.js",
+    "upload": "node googleDrive.js"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "body-parser": "^1.19.0"
-  }
+    "fluent-ffmpeg": "^2.1.2",
+    "googleapis": "^105.0.0",
+    "dotenv": "^10.0.0"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "keywords": [
+    "RTSP",
+    "camera",
+    "Tapo",
+    "record",
+    "Google Drive"
+  ],
+  "author": "Ansuman Behera",
+  "license": "ISC"
 }
